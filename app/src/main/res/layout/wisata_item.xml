@@ -7,39 +7,44 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="12dp"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:padding="12dp">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_wisata"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:id="@+id/iv_wisata"
-            android:src="@drawable/danau_toba"/>
+            android:src="@drawable/danau_toba" />
+
         <Space
             android:layout_width="12dp"
-            android:layout_height="wrap_content"/>
-      <LinearLayout
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:orientation="vertical">
-          <TextView
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:text="tes"
-              android:id="@+id/tv_wisata"
-              android:textSize="12sp"
-              android:textStyle="bold"/>
-          <Space
-              android:layout_width="wrap_content"
-              android:layout_height="6dp"/>
-          <TextView
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:text="tes"
-              android:id="@+id/tv_desc"
-              android:textSize="12sp"
-              android:maxLength="100"/>
-      </LinearLayout>
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_wisata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="tes"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="6dp" />
+
+            <TextView
+                android:id="@+id/tv_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="100"
+                android:text="tes"
+                android:textSize="12sp" />
+        </LinearLayout>
 
     </LinearLayout>
 

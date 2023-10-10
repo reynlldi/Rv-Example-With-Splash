@@ -12,8 +12,8 @@ import com.example.recyclerviewexercise.model.WisataModel
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding:ActivityMainBinding
-    private lateinit var adapter:RvWisataAdapter
+    private lateinit var binding: ActivityMainBinding
+    private lateinit var adapter: RvWisataAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,20 +29,20 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setRvAdapter() {
-        val dataList:MutableList<WisataModel> = mutableListOf()
+        val dataList: MutableList<WisataModel> = mutableListOf()
 
         nameWisata().forEachIndexed { index, name ->
-            dataList.add(WisataModel(imageWisata().get(index),name,descWisata()[index]))
+            dataList.add(WisataModel(imageWisata().get(index), name, descWisata()[index]))
         }
-        Log.d("ISI DATANYA ",dataList.toString())
-        adapter = RvWisataAdapter(dataList,this@MainActivity)
+        Log.d("ISI DATANYA ", dataList.toString())
+        adapter = RvWisataAdapter(dataList, this@MainActivity)
         binding.rvExample.adapter = adapter
     }
 
-    private fun nameWisata():Array<String> = resources.getStringArray(R.array.data_name)
-    private fun descWisata():Array<String> = resources.getStringArray(R.array.data_description)
+    private fun nameWisata(): Array<String> = resources.getStringArray(R.array.data_name)
+    private fun descWisata(): Array<String> = resources.getStringArray(R.array.data_description)
 
-    private fun imageWisata():List<Int> = listOf(
+    private fun imageWisata(): List<Int> = listOf(
         R.drawable.pura_besakih,
         R.drawable.kepulauan_derawan,
         R.drawable.taman_laut_bunaken,
